@@ -17,4 +17,4 @@ kubectl get pods
 
 # Step 4:
 # Forward the container port to a host
-podname=$(kubectl get pods --no-headers -o custom-columns=":metadata.name" | grep ml-microservice)
+kubectl port-forward deployment/ml-microservice 8000:80
